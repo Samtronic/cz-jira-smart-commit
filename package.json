@@ -1,5 +1,5 @@
 {
-  "name": "cz-jira-smart-commit",
+  "name": "cz-full-facing-jira-smart-commit",
   "version": "2.0.1",
   "description": "A commitizen adapter for Jira smart commits",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/commitizen/cz-jira-smart-commit.git"
+    "url": "git+https://github.com/fullfacing/cz-jira-smart-commit.git"
   },
   "keywords": [
     "commitizen",
@@ -22,13 +22,14 @@
   ],
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
   "contributors": [
-    "Jane Kim <jane@janekim.me> (http://janekim.me)"
+    "Jane Kim <jane@janekim.me> (http://janekim.me)",
+    "Tiaan du Plessis <tiaanduplessis@hotmail.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/commitizen/cz-jira-smart-commit/issues"
+    "url": "https://github.com/fullfacing/cz-jira-smart-commit/issues"
   },
-  "homepage": "https://github.com/commitizen/cz-jira-smart-commit#readme",
+  "homepage": "https://github.com/fullfacing/cz-jira-smart-commit#readme",
   "devDependencies": {
     "babel": "5.8.21",
     "chai": "3.2.0",
@@ -40,6 +41,6 @@
     "with-package": "0.2.0"
   },
   "dependencies": {
-    "inquirer": "^1.1.3"
+    "inquirer": "^6.2.0"
   }
 }

@@ -2,8 +2,6 @@
 
 A commitizen adapter for [Jira smart commits](https://confluence.atlassian.com/display/FISHEYE/Using+smart+commits).
 
-![Screenshot](other/screenshot.png)
-
 ## Usage
 
 ### Global Installation
@@ -21,20 +19,20 @@ chmod +x install.sh
 Install this adapter
 
 ```
-npm install cz-jira-smart-commit
+npm install cz-full-facing-jira-smart-commit
 ```
 
 Reference it in your `.cz.json` of your project
 
 ```json
 {
-  "path": "node_modules/cz-jira-smart-commit/"
+  "path": "node_modules/cz-full-facing-jira-smart-commit/"
 }
 ```
 
 or use commitizen to init
 ```
-commitizen init cz-jira-smart-commit
+commitizen init cz-full-facing-jira-smart-commit
 ```
 
 

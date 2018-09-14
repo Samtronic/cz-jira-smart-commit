@@ -32,7 +32,7 @@ function prompter(cz, commit) {
     {
       type: 'input',
       name: 'message',
-      message: 'GitHub commit message (required):\n',
+      message: 'Commit message (required):\n',
       validate: function(input) {
         if (!input) {
           return 'empty commit message';
