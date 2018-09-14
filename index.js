@@ -31,18 +31,6 @@ function prompter(cz, commit) {
   inquirer.prompt([
     {
       type: 'input',
-      name: 'message',
-      message: 'Commit message (required):\n',
-      validate: function(input) {
-        if (!input) {
-          return 'empty commit message';
-        } else {
-          return true;
-        }
-      }
-    },
-    {
-      type: 'input',
       name: 'issues',
       message: 'Jira Issue ID(s) (required):\n',
       validate: function(input) {
@@ -53,6 +41,19 @@ function prompter(cz, commit) {
         }
       }
     },
+    {
+      type: 'input',
+      name: 'message',
+      message: 'Commit message (required):\n',
+      validate: function(input) {
+        if (!input) {
+          return 'empty commit message';
+        } else {
+          return true;
+        }
+      }
+    },
+
     {
       type: 'input',
       name: 'workflow',
@@ -82,8 +83,8 @@ function prompter(cz, commit) {
 
 function formatCommit(commit, answers) {
   commit(filter([
-    answers.message,
     answers.issues,
+    answers.message,
     answers.workflow ? '#' + answers.workflow : undefined,
     answers.time ? '#time ' + answers.time : undefined,
     answers.comment ? '#comment ' + answers.comment : undefined,
@@ -95,3 +96,5 @@ function filter(array) {
     return !!item;
   });
 }
+
+

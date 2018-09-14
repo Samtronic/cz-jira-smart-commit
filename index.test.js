@@ -25,22 +25,22 @@ describe('format commits', () => {
   });
   it('should perform a full commit', () => {
     czJiraSmartCommit.formatCommit((result) => {
-      expect(result).to.equal('sample commit message CZ-234 CZ-235 #closed #time 3y 2w 7d 8h 30m #comment This took waaaaay too long')
+      expect(result).to.equal('CZ-234 CZ-235 sample commit message #closed #time 3y 2w 7d 8h 30m #comment This took waaaaay too long')
     }, {message, issues, workflow, time, comment});
   });
   it('should commit without a workflow', () => {
     czJiraSmartCommit.formatCommit((result) => {
-      expect(result).to.equal('sample commit message CZ-234 CZ-235 #time 3y 2w 7d 8h 30m #comment This took waaaaay too long')
+      expect(result).to.equal('CZ-234 CZ-235 sample commit message #time 3y 2w 7d 8h 30m #comment This took waaaaay too long')
     }, {message, issues, time, comment});
   });
   it('should commit without a time', () => {
     czJiraSmartCommit.formatCommit((result) => {
-      expect(result).to.equal('sample commit message CZ-234 CZ-235 #closed #comment This took waaaaay too long')
+      expect(result).to.equal('CZ-234 CZ-235 sample commit message #closed #comment This took waaaaay too long')
     }, {message, issues, workflow, comment});
   });
   it('should commit without a comment', () => {
     czJiraSmartCommit.formatCommit((result) => {
-      expect(result).to.equal('sample commit message CZ-234 CZ-235 #closed #time 3y 2w 7d 8h 30m')
+      expect(result).to.equal('CZ-234 CZ-235 sample commit message #closed #time 3y 2w 7d 8h 30m')
     }, {message, issues, workflow, time});
   });
 });
